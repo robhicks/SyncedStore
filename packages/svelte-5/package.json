@@ -1,0 +1,53 @@
+{
+  "name": "@syncedstore/svelte-5",
+  "description": "Svelte helper for SyncedStore.",
+  "keywords": [
+    "reactive",
+    "crdt",
+    "yjs",
+    "sync",
+    "automerge",
+    "collaboration",
+    "collaborative",
+    "observable",
+    "operational transforms",
+    "conflict",
+    "offline",
+    "shared editing",
+    "svelte"
+  ],
+  "version": "0.1.0",
+  "private": false,
+  "main": "dist/syncedstore-svelte-5.js",
+  "module": "dist/syncedstore-svelte-5.module.js",
+  "umd:main": "dist/syncedstore-svelte-5.umd.js",
+  "exports": {
+    "types": "./types/index.d.ts",
+    "require": "./dist/syncedstore-svelte-5.js",
+    "default": "./dist/syncedstore-svelte-5.modern.mjs"
+  },
+  "source": "src/index.ts",
+  "types": "types/index.d.ts",
+  "license": "MIT",
+  "peerDependencies": {
+    "@reactivedata/reactive": "0.2.2",
+    "@syncedstore/core": "0.6.0",
+    "svelte": "5.17.3"
+  },
+  "devDependencies": {
+    "@reactivedata/reactive": "^0.2.2",
+    "@syncedstore/core": "^0.6.0",
+    "microbundle": "^0.15.1",
+    "rimraf": "^6.0.1",
+    "svelte": "5.17.3"
+  },
+  "scripts": {
+    "test": "echo \"Run tests from root\" && exit 1",
+    "clean": "rimraf dist && rimraf types",
+    "build": "npm run clean && microbundle build --raw --no-compress --tsconfig tsconfig.build.json",
+    "watch": "microbundle watch"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
